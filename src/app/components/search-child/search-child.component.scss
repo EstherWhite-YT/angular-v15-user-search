@@ -1,0 +1,22 @@
+mat-card {
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+
+  mat-card-title {
+    text-transform: uppercase;
+  }
+
+  mat-icon {
+    font-size: 10rem;
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem 2rem 3rem 2.5rem;
+  }
+
+  button {
+    width: 10rem;
+    text-transform: uppercase;
+  }
+}
