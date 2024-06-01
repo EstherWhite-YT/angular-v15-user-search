@@ -6,6 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search-child.component.scss'],
 })
 export class SearchChildComponent {
+  
   @Output() newItemEvent = new EventEmitter();
 
   clearSearchChild() {
