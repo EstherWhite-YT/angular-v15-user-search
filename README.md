@@ -2,6 +2,8 @@
 
 copy from [Stackblitz](https://stackblitz.com/edit/node-ocjg5s)
 
+[![image](youtube-thumbnail.jpg)](https://www.youtube.com/watch?v=sy2CZSrqlHo&list=PLi9PDLFx3_nNwBS7mZZHCQldLQ5e-T9Q3)
+
 # [VIEW LIVE](https://monacodelisa-yt.github.io/angular-v15-user-search)
 
 # TestApp2023
