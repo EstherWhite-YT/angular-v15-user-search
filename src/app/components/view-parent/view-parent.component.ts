@@ -7,7 +7,7 @@ import { User } from '../../models/user';
   styleUrls: ['./view-parent.component.scss'],
 })
 export class ViewParentComponent implements OnInit {
-  value: string = '';
+  searchTerm: string = '';
   filteredUsers: User[] = [];
   usersHaveBeenFiltered = false;
   addOnBlur = true;
@@ -19,31 +19,31 @@ export class ViewParentComponent implements OnInit {
 
   displayedColumns: string[] = ['name', 'email'];
   allUsers: User[] = [
-    { name: 'Elona', email: 'sample@gmail.com' },
-    { name: 'Elonio', email: 'sample@gmail.com' },
-    { name: 'Frisbee', email: 'sample@gmail.com' },
-    { name: 'Sunscreen', email: 'sample@gmail.com' },
+    { name: 'Elona Muskina', email: 'elonamuskina@gmail.com' },
+    { name: 'Elonio Muskoni', email: 'eloniomuskoni@gmail.com' },
+    { name: 'Frisbee', email: 'frisbee@gmail.com' },
+    { name: 'Sunscreen', email: 'sunscreen@gmail.com' },
     { name: 'Chuck Norris', email: 'chuck@noris.com' },
-    { name: 'MonaCodeLisa', email: 'monacodelisa@gmail.com' },
+    { name: 'EstherSoftwareDev', email: 'esthersoftwaredev@gmail.com' },
   ];
 
   search() {
     this.usersHaveBeenFiltered = true;
 
     this.allUsers.map((user) => {
-      if (this.value.toLowerCase() === user.name.toLowerCase()) {
+      if (user.name.toLowerCase().includes(this.searchTerm.toLowerCase())) {
         this.filteredUsers.push({
-          name: this.value,
-          email: 'sample@gmail.com',
+          name: user.name,
+          email: user.email,
         });
       }
-      console.log(this.filteredUsers);
+      // console.log(this.filteredUsers);
     });
   }
 
   clearSearch() {
-    this.value = '';
     this.usersHaveBeenFiltered = false;
     this.filteredUsers = [];
+    this.searchTerm = '';
   }
 }
